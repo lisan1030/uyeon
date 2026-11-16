@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>역사 퀴즈 | 우연</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== 상단 메뉴 ===== -->
+  <header class="header">
+    <a href="index.html" class="logo">우연</a>
+    <nav class="nav">
+      <a href="index.html">홈</a>
+      <a href="about.html">소개</a>
+      <a href="gallery.html">갤러리</a>
+      <a href="contact.html">연락처</a>
+      <a href="quiz.html" class="active">역사 퀴즈</a>
+    </nav>
+  </header>
+
+  <!-- ===== 페이지 제목 배너 ===== -->
+  <section class="page-banner">
+    <h1>역사 퀴즈</h1>
+    <p>나의 역사 실력은 몇 점일까?</p>
+  </section>
+
+  <section class="section section-gray">
+    <div class="quiz-box">
+
+      <!-- ===== 화면 1: 시작 ===== -->
+      <div id="start-screen" class="quiz-screen active">
+        <div class="quiz-emoji">📜</div>
+        <h2>우연 역사 퀴즈</h2>
+        <p class="quiz-info">총 <b id="total-count">10</b>문제 · 4지선다</p>
+        <p class="quiz-info">문제는 매번 순서가 바뀝니다!</p>
+        <button id="start-btn" class="btn quiz-btn">시작하기</button>
+      </div>
+
+      <!-- ===== 화면 2: 문제 ===== -->
+      <div id="question-screen" class="quiz-screen">
+        <!-- 진행 상황 -->
+        <div class="quiz-top">
+          <span id="progress-text">1 / 10</span>
+          <span id="score-text">점수 0</span>
+        </div>
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+
+        <!-- 문제와 보기 -->
+        <h2 id="question" class="question">문제</h2>
+        <div id="options" class="options"></div>
+
+        <!-- 정답 해설 (고른 뒤에 보임) -->
+        <div id="explain" class="explain"></div>
+
+        <button id="next-btn" class="btn quiz-btn next-btn">다음 문제</button>
+      </div>
+
+      <!-- ===== 화면 3: 결과 ===== -->
+      <div id="result-screen" class="quiz-screen">
+        <div id="result-emoji" class="quiz-emoji">🏆</div>
+        <h2 id="result-title">결과</h2>
+        <p class="result-score"><b id="final-score">0</b> / <span id="final-total">10</span></p>
+        <p id="result-message" class="quiz-info"></p>
+        <div class="result-btns">
+          <button id="retry-btn" class="btn quiz-btn retry-btn">다시 풀기</button>
+          <a href="#" class="btn quiz-btn" target="_blank">우연 가입 지원하기</a>  <!-- ▼ 구글폼 링크 -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 가입 유도 ===== -->
+  <section class="cta">
+    <h2>우연과 함께할래요?</h2>
+    <a href="#" class="btn" target="_blank">가입 지원하기</a>  <!-- ▼ 구글폼 링크 -->
+  </section>
+
+  <!-- ===== 맨 아래 ===== -->
+  <footer class="footer">
+    <p>© 2026 국민대학교 중앙동아리 우연</p>
+    <p class="credit">made by 이산</p>
+  </footer>
+
+  <!-- 퀴즈 동작 파일 연결 -->
+  <script src="js/quiz.js"></script>
+
+</body>
+</html>
