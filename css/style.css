@@ -803,3 +803,80 @@ a.contact-card:hover {
     padding: 14px 16px;
   }
 }
+
+/* =========================================
+   모집 마감 (closed.html)
+   ========================================= */
+.closed {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--header-h) + 40px) 20px 60px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/main.jpg") center / cover no-repeat,
+    var(--main-color);
+}
+
+.closed-box {
+  max-width: 560px;
+  width: 100%;
+  padding: 56px 32px;
+  text-align: center;
+  background: #fff;
+  border-radius: 24px;
+  border-top: 5px solid rgb(var(--wood-color));
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.closed-emoji {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+
+.closed-box h1 {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: rgb(var(--wood-color));
+  margin-bottom: 12px;
+}
+
+.closed-main {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.closed-sub {
+  font-size: 15px;
+  color: #666;
+}
+
+.closed-btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+/* 테두리만 있는 버튼 */
+.btn-outline {
+  background: #fff;
+  border: 2px solid rgb(var(--wood-color));
+  color: rgb(var(--wood-color));
+}
+
+@media (max-width: 600px) {
+  .closed-box {
+    padding: 40px 20px;
+  }
+  .closed-box h1 {
+    font-size: 21px;
+  }
+  .closed-main {
+    font-size: 19px;
+  }
+}
